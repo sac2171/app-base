@@ -4,6 +4,8 @@ services:
     restart: always
     build:
         context: ./backend
+    volumes:
+      - ./backend:/app/backend
     expose:
         - 8000
     ports:
@@ -19,7 +21,7 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - .:/react-frontend
+      - ./frontend:/app/frontend
   postgres:
     restart: always
     image: postgres:9.5.4

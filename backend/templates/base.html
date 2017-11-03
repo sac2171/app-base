@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>App</title>
+  </head>
+  <body>
+    <h1>This is django base.html</h1>
+    <div id="root"></div>
+    <script>
+      var csrf = "{{csrf_token}}";
+      window.csrf = csrf;
+      window.initial_props = {{initial_props|safe}};
+    </script>
+  </body>
+  <!-- This probably shouldn't be hardcoded -->
+  <script type="text/javascript" src="http://localhost:3000/static/js/bundle.js"></script>
+</html>
