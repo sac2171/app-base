@@ -1,0 +1,10 @@
+An application starter for my personal projects.
+
+Frontend -> Create React App # w/ Typescript scripts
+Backend  -> Django 1.11 w/ py3
+Proxy    -> What the user hits to get past annoying CORS issues
+
+Trying to do something very similar to:
+https://github.com/Seedstars/django-react-redux-base
+
+But w/ some of my more personal patterns/idioms.

@@ -1,0 +1,29 @@
+version: '2'
+services:
+  django:
+    restart: always
+    build:
+        context: ./backend
+    expose:
+        - 8000
+    ports:
+      - 8000:8000
+  # redis:
+  #   image: "redis:alpine"
+  react:
+    restart: always
+    build:
+      context: ./frontend
+    expose:
+      - 3000
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/react-frontend
+  postgres:
+    restart: always
+    image: postgres:9.5.4
+    expose:
+        - 5432
+    volumes:
+      - ./docker/postgres/data:/var/lib/postgresql
