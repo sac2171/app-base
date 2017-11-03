@@ -8,3 +8,13 @@ Trying to do something very similar to:
 https://github.com/Seedstars/django-react-redux-base
 
 But w/ some of my more personal patterns/idioms.
+https://github.com/jonaskello/tslint-immutable#no-this-no-class
+
+
+Close to get the build setup to be:
+
+`docker compose build`
+`docker compose up`
+
+but the data volumes overwride node_modules, so using some of the info found:
+https://stackoverflow.com/questions/30043872/docker-compose-node-modules-not-present-in-a-volume-after-npm-install-succeeds

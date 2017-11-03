@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './App.css';
-import 'whatwg-fetch'
 
+import 'whatwg-fetch'
 const logo = require('./logo.svg');
 
 class App extends React.Component {
@@ -20,7 +20,7 @@ class App extends React.Component {
     fetch('/' , {
         method: "POST",
         credentials:'include',
-        headers:headers,
+          headers:headers,
         body : JSON.stringify({
           month:true,
         })
@@ -34,7 +34,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
+            <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
