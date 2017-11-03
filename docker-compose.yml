@@ -12,6 +12,21 @@ services:
       - 8000:8000
   # redis:
   #   image: "redis:alpine"
+
+  # https://stackoverflow.com/questions/30043872/docker-compose-node-modules-not-present-in-a-volume-after-npm-install-succeeds
+  react-proxy:
+    restart: always
+    build:
+      context: ./proxy
+    expose:
+      - 4000
+    ports:
+      - 4000:4000
+    volumes:
+      - ./proxy:/app/proxy
+    links:
+      - react
+      - django
   react:
     restart: always
     build:

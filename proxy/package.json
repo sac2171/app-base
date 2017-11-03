@@ -1,0 +1,12 @@
+{
+  "name": "react-django-proxy",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node proxy.js"
+  },
+  "dependencies": {
+    "express": "^4.15.3",
+    "http-proxy-middleware": "^0.17.4"
+  }
+}
